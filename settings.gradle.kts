@@ -1,4 +1,4 @@
-rootProject.name = "ModuleTemplate"
+rootProject.name = "MultiModuleTemplate"
 
 include(":TNE-Module-Core")
 include(":TNE-Module-Sponge")
