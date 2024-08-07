@@ -1,4 +1,4 @@
-package net.tnemc.module.template;
+package net.tnemc.module.bukkit.template;
 /*
  * The New Economy
  * Copyright (C) 2022 - 2024 Daniel "creatorfromhell" Vidmar
@@ -17,15 +17,11 @@ package net.tnemc.module.template;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import net.tnemc.menu.core.MenuHandler;
-import net.tnemc.plugincore.PluginCore;
-import net.tnemc.plugincore.core.io.storage.StorageManager;
-import net.tnemc.plugincore.core.module.Module;
+import net.tnemc.module.core.template.TemplateCoreModule;
 import net.tnemc.plugincore.core.module.ModuleInfo;
 import revxrsal.commands.CommandHandler;
 import revxrsal.commands.orphan.OrphanCommand;
 
-import java.io.File;
 import java.util.List;
 
 /**
@@ -35,46 +31,11 @@ import java.util.List;
  * @since 1.0.0.0
  */
 @ModuleInfo(
-       name = "Template",
+       name = "TemplateBukkit",
        author = "creatorfromhell",
        version = "1.0.0.0"
 )
-public class TemplateModule implements Module {
-
-  @Override
-  public void enable(PluginCore pluginCore) {
-    PluginCore.log().inform("TemplateModule enabled");
-  }
-
-  @Override
-  public void disable(PluginCore pluginCore) {
-    PluginCore.log().inform("TemplateModule disabled");
-  }
-
-  @Override
-  public void initConfigurations(File file) {
-
-  }
-
-  @Override
-  public void backup(StorageManager storageManager) {
-
-  }
-
-  @Override
-  public void reset(StorageManager storageManager) {
-
-  }
-
-  @Override
-  public void enableSave(StorageManager storageManager) {
-
-  }
-
-  @Override
-  public void enableMenu(MenuHandler menuHandler) {
-
-  }
+public class TemplateBukkitModule extends TemplateCoreModule {
 
   @Override
   public void registerCommands(CommandHandler commandHandler) {

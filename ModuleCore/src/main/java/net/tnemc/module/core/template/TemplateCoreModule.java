@@ -1,4 +1,4 @@
-package net.tnemc.module.template;
+package net.tnemc.module.core.template;
 /*
  * The New Economy
  * Copyright (C) 2022 - 2024 Daniel "creatorfromhell" Vidmar
@@ -21,12 +21,8 @@ import net.tnemc.menu.core.MenuHandler;
 import net.tnemc.plugincore.PluginCore;
 import net.tnemc.plugincore.core.io.storage.StorageManager;
 import net.tnemc.plugincore.core.module.Module;
-import net.tnemc.plugincore.core.module.ModuleInfo;
-import revxrsal.commands.CommandHandler;
-import revxrsal.commands.orphan.OrphanCommand;
 
 import java.io.File;
-import java.util.List;
 
 /**
  * TemplateModule
@@ -34,12 +30,7 @@ import java.util.List;
  * @author creatorfromhell
  * @since 1.0.0.0
  */
-@ModuleInfo(
-       name = "Template",
-       author = "creatorfromhell",
-       version = "1.0.0.0"
-)
-public class TemplateModule implements Module {
+public abstract  class TemplateCoreModule implements Module {
 
   @Override
   public void enable(PluginCore pluginCore) {
@@ -74,25 +65,5 @@ public class TemplateModule implements Module {
   @Override
   public void enableMenu(MenuHandler menuHandler) {
 
-  }
-
-  @Override
-  public void registerCommands(CommandHandler commandHandler) {
-
-  }
-
-  @Override
-  public List<OrphanCommand> registerMoneySub() {
-    return List.of();
-  }
-
-  @Override
-  public List<OrphanCommand> registerTransactionSub() {
-    return List.of();
-  }
-
-  @Override
-  public List<OrphanCommand> registerAdminSub() {
-    return List.of();
   }
 }

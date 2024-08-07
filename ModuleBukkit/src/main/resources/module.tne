@@ -1,1 +1,1 @@
-main=net.tnemc.module.template.TemplateModule
+main=net.tnemc.module.bukkit.template.TemplateBukkitModule
